@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { Posts } from './Posts'
+import  Posts  from './Posts'
 
-export function Post(props) {
+export default function Post ({ title, description }) {
   return (
     <ul>
 
         <li>
-            <h2>{props.title}</h2>
-            <p>{props.description}</p>
+            <h2>{title}</h2>
+            <p>{description}</p>
         </li>
     </ul>
 
