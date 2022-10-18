@@ -1,10 +1,10 @@
-import React from 'react'
-import  Post   from "./Post"
-import  postagem from '../postagem.json';
+import React from 'react';
+import   Post   from "../Post/Post";
+import  postagem from '../../postagem.json';
 
 
 
-export default function Posts() {
+export  function Posts() {
   
   return (
     <ul>

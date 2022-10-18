@@ -1,6 +1,6 @@
-import   Header   from "./components/Header";
-import    Posts    from "./components/Posts";
-
+import    Header    from "./components/Header/Header";
+import   { Posts }   from "./components/Posts/Posts";
+import  './components/styles/global.css';
 
 export default function App() {
   return (
