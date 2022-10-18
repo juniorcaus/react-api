@@ -1,4 +1,6 @@
 import React from 'react';
+import './styles.css';
+
 import   Post   from "../Post/Post";
 import  postagem from '../../postagem.json';
 
