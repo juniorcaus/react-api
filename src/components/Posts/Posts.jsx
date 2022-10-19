@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 
 import   Post   from "../Post/Post";
-import  postagem from '../../postagem.json';
+import { api } from '../../services/api';
 
 
 
 export  function Posts() {
+  const [postagem, setPostagem] = useState([]);
+  
+  useEffect(() => {
+    api.get('/postagem').then((response) => {
+      console.log(response);
+      setPostagem(response.data);
+    })
+  }, [])
   
   return (
     <ul>
         {
-        postagem.postagem.map((post) => {
+        postagem?.map((post) => {
 
         
             return (
-              <Post key={postagem.id} title={post.title} description={post.description} />
+              <Post  title={post.title} description={post.description} />
             );
          })}
 
